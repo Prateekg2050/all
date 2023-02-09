@@ -1,0 +1,62 @@
+void main()=> runApp(MaterialApp(
+  home: Scaffold(
+    appBar: AppBar(title: Text("XyloApp"),),
+    body: XyloPage(),
+  ),
+));
+
+class XyloPage extends StatefulWidget {
+  const XyloPage({Key? key}) : super(key: key);
+
+  @override
+  State<XyloPage> createState() => _XyloPageState();
+}
+
+class _XyloPageState extends State<XyloPage> {
+
+    void playSound(int number){
+      final player = AudioCache();
+      player.play('assets_note$number.wav');
+    }
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.stretch,
+        children: [
+          Expanded(flex: 1,child: TextButton(child: Text("1"),
+            style: TextButton.styleFrom(backgroundColor: Colors.redAccent),
+            onPressed: (() {
+              playSound(1);
+            }),
+          )),
+          Expanded(flex: 1,child: TextButton(child: Text("2"),
+            style: TextButton.styleFrom(backgroundColor: Colors.blueAccent),
+            onPressed: (() {
+              playSound(2);
+            }),
+          )),
+          Expanded(flex: 1,child: TextButton(child: Text("3"),
+            style: TextButton.styleFrom(backgroundColor: Colors.yellowAccent),
+            onPressed: (() {
+              playSound(3);
+            }),
+          )),
+          Expanded(flex: 1,child: TextButton(child: Text("4"),
+            style: TextButton.styleFrom(backgroundColor: Colors.greenAccent),
+            onPressed: (() {
+              playSound(4);
+            }),
+          )),
+          Expanded(flex: 1,child: TextButton(child: Text("5"),
+            style: TextButton.styleFrom(backgroundColor: Colors.purpleAccent),
+            onPressed: (() {
+              playSound(5);
+            }),
+          )),
+        ],
+      ),
+    );
+  }
+}
