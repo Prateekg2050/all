@@ -1,0 +1,64 @@
+//safearea
+import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
+void main() {
+runApp(MaterialApp(
+home:Scaffold(
+appBar: AppBar(
+title: Text(
+'without safearea',
+textAlign: TextAlign.center,
+style: TextStyle(
+fontSize: 40.0,
+fontStyle: FontStyle.italic,
+fontWeight: FontWeight.w800,
+color: Colors.deepOrangeAccent,
+),
+),
+),
+body: Center(
+child: Text(
+'without safearea',
+textAlign: TextAlign.center,
+style: TextStyle(
+fontSize: 40.0,
+fontWeight: FontWeight.w800,
+color: Colors.deepOrangeAccent,
+),
+),
+),
+),
+),
+);
+}
+//scaffold
+import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
+void main() {
+runApp(MaterialApp(
+home:Scaffold(
+appBar: AppBar(
+title: Text(
+'Scaffold-SafeArea',
+textAlign: TextAlign.center,
+style: TextStyle(
+fontSize: 40.0,
+fontStyle: FontStyle.italic,
+fontWeight: FontWeight.w800,
+color: Colors.deepOrangeAccent,
+),
+),
+),
+body: Container(
+child: SafeArea(
+child:Center(
+child: Text(
+'this is a sample'
+),
+),
+),
+),
+),
+),
+);
+}
